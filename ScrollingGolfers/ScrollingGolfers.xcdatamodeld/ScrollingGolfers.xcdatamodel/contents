@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="planImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="totalWhiteYardage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalYellowYardage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="allHoles" toMany="YES" deletionRule="Nullify" destinationEntity="Hole" inverseName="partOfCourse" inverseEntity="Hole" syncable="YES"/>
+        <relationship name="players" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Golfer" inverseName="playsOn" inverseEntity="Golfer" syncable="YES"/>
+    </entity>
+    <entity name="Golfer" representedClassName="Golfer" syncable="YES" codeGenerationType="class">
+        <attribute name="handicap" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scores" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="totalWinnings" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="playsOn" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="players" inverseEntity="Course" syncable="YES"/>
+    </entity>
+    <entity name="Hole" representedClassName="Hole" syncable="YES" codeGenerationType="class">
+        <attribute name="number" attributeType="String" minValueString="1" maxValueString="2" defaultValueString="19" syncable="YES"/>
+        <attribute name="par" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="whiteYardage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yellowYardage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="partOfCourse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="allHoles" inverseEntity="Course" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="-432" positionY="-222" width="128" height="133"/>
+        <element name="Golfer" positionX="-225" positionY="-127" width="128" height="135"/>
+        <element name="Hole" positionX="-227" positionY="-297" width="128" height="118"/>
+    </elements>
+</model>
