@@ -15,9 +15,10 @@ struct GolferStruct {
     
     var totalWinnings = 0
     
-    var todaysWinnings: Int? {
+    var todaysWinnings: Int = 0 {
         willSet {
-            self.totalWinnings = todaysWinnings! + newValue!            }
+            self.totalWinnings = todaysWinnings + newValue
+        }
     }
     
     var scores: [String:Int]?

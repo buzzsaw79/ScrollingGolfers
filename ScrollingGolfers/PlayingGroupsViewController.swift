@@ -11,21 +11,7 @@ import UIKit
 var callCount = 0
 
 class PlayingGroupsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, CellSelectedCallPopupDelegate {
-    
-    func cellSelectedCallPopup(_ indexPath: IndexPath,_ golfer: GolferStruct) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let popup = sb.instantiateInitialViewController()! as! EnterScorePopupViewController
-        
-        popup.golfer = golfer
-        
-        
-        
-        
-        present(popup, animated: true, completion: nil)
-    }
-    
-    
-    
+
         //MARK: - Properties
     private let cellId = "playingGroupsCell"
     private let sectionHeaderCellId = "sectionHeaderCell"
@@ -59,7 +45,7 @@ class PlayingGroupsViewController: UICollectionViewController, UICollectionViewD
             for (index, golfer) in golferNames.enumerated() {
                 let scoreDict = [String:Int]()
                 let golferImage = UIImage(named: "head\(index)")
-                let golferStruct = GolferStruct(name: golfer, handicap: golferHandicaps[index], image: golferImage, totalWinnings: 0, todaysWinnings: nil, scores: scoreDict)
+                let golferStruct = GolferStruct(name: golfer, handicap: golferHandicaps[index], image: golferImage, totalWinnings: 0, todaysWinnings: 0, scores: scoreDict)
 //                let golferStruct = Golfer(name: golfer, handicap: golferHandicaps[index], totalWinnings: 0, todaysWinnings: 0)
                 _golferArray.append(golferStruct)
             }
@@ -188,6 +174,17 @@ class PlayingGroupsViewController: UICollectionViewController, UICollectionViewD
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 //        return UIEdgeInsets(top: 2.0, left: 8.0, bottom: 2.0, right: 8.0)
 //    }
+        //MARK: - CellSelectedCallPopupDelegate
+    func cellSelectedCallPopup(_ indexPath: IndexPath,_ golfer: GolferStruct) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let popup = sb.instantiateInitialViewController()! as! EnterScorePopupViewController
+        
+        popup.golfer = golfer
+        print("CellSelectedCallPopupDelegate: IndexPath \(indexPath)")
+        present(popup, animated: true, completion: nil)
+    }
+    
+    
     
         //MARK: - Helper Functions
     

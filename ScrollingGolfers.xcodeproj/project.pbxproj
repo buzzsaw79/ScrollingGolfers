@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		303D83831E6815FB00FE016A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D83821E6815FB00FE016A /* CoreDataStack.swift */; };
 		303D83861E682E1A00FE016A /* PlayingGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D83851E682E1A00FE016A /* PlayingGroupCell.swift */; };
-		304429391E6EC7920049C274 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304429381E6EC7920049C274 /* UIColor+CustomColors.swift */; };
 		3044293B1E73044A0049C274 /* GolferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044293A1E73044A0049C274 /* GolferCell.swift */; };
 		3044293D1E7AD6A20049C274 /* GolferStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044293C1E7AD6A20049C274 /* GolferStruct.swift */; };
 		30A034521E6811BB00419B83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A034511E6811BB00419B83 /* AppDelegate.swift */; };
@@ -17,6 +16,7 @@
 		30A0345A1E6811BB00419B83 /* ScrollingGolfers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30A034581E6811BB00419B83 /* ScrollingGolfers.xcdatamodeld */; };
 		30A0345C1E6811BB00419B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A0345B1E6811BB00419B83 /* Assets.xcassets */; };
 		30A0345F1E6811BB00419B83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0345D1E6811BB00419B83 /* LaunchScreen.storyboard */; };
+		30F40258204218D800B69D5D /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F40257204218D800B69D5D /* UIColor+CustomColors.swift */; };
 		30F6E3DD203887EA00E25949 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E3DB203887EA00E25949 /* Alert.swift */; };
 		30F6E3DE203887EA00E25949 /* today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6E3DC203887EA00E25949 /* today.swift */; };
 		30F6E3E020389D0800E25949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F6E3DF20389D0800E25949 /* Main.storyboard */; };
@@ -26,7 +26,6 @@
 /* Begin PBXFileReference section */
 		303D83821E6815FB00FE016A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		303D83851E682E1A00FE016A /* PlayingGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingGroupCell.swift; sourceTree = "<group>"; };
-		304429381E6EC7920049C274 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		3044293A1E73044A0049C274 /* GolferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GolferCell.swift; sourceTree = "<group>"; };
 		3044293C1E7AD6A20049C274 /* GolferStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GolferStruct.swift; sourceTree = "<group>"; };
 		30A0344E1E6811BB00419B83 /* ScrollingGolfers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingGolfers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +35,7 @@
 		30A0345B1E6811BB00419B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30A0345E1E6811BB00419B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30A034601E6811BB00419B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30F40257204218D800B69D5D /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		30F6E3DB203887EA00E25949 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		30F6E3DC203887EA00E25949 /* today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = today.swift; sourceTree = "<group>"; };
 		30F6E3DF20389D0800E25949 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -86,10 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				30A034511E6811BB00419B83 /* AppDelegate.swift */,
+				30F40257204218D800B69D5D /* UIColor+CustomColors.swift */,
 				30A0345B1E6811BB00419B83 /* Assets.xcassets */,
 				30A0345D1E6811BB00419B83 /* LaunchScreen.storyboard */,
 				30A034601E6811BB00419B83 /* Info.plist */,
-				304429381E6EC7920049C274 /* UIColor+CustomColors.swift */,
 				30F6E3DB203887EA00E25949 /* Alert.swift */,
 				30F6E3DC203887EA00E25949 /* today.swift */,
 			);
@@ -199,11 +199,11 @@
 				303D83861E682E1A00FE016A /* PlayingGroupCell.swift in Sources */,
 				3044293D1E7AD6A20049C274 /* GolferStruct.swift in Sources */,
 				303D83831E6815FB00FE016A /* CoreDataStack.swift in Sources */,
+				30F40258204218D800B69D5D /* UIColor+CustomColors.swift in Sources */,
 				30F6E3DE203887EA00E25949 /* today.swift in Sources */,
 				30A034541E6811BB00419B83 /* PlayingGroupsViewController.swift in Sources */,
 				30F6E3E22038C44000E25949 /* EnterScorePopupViewController.swift in Sources */,
 				30A0345A1E6811BB00419B83 /* ScrollingGolfers.xcdatamodeld in Sources */,
-				304429391E6EC7920049C274 /* UIColor+CustomColors.swift in Sources */,
 				3044293B1E73044A0049C274 /* GolferCell.swift in Sources */,
 				30A034521E6811BB00419B83 /* AppDelegate.swift in Sources */,
 				30F6E3DD203887EA00E25949 /* Alert.swift in Sources */,

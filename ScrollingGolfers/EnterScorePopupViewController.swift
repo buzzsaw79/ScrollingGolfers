@@ -47,7 +47,9 @@ class EnterScorePopupViewController: UIViewController, UIPickerViewDelegate, UIP
         print("VIEW DID APPEAR CALLED")
         titleLabel.text = golfer?.name
         titleImage.image = golfer?.image
-        titleImage.contentMode = .scaleAspectFit
+        titleImage.contentMode = .scaleAspectFill
+        titleImage.layer.cornerRadius = 22
+        titleImage.clipsToBounds = true
     }
 
     //MARK: - PickerView
@@ -89,12 +91,14 @@ class EnterScorePopupViewController: UIViewController, UIPickerViewDelegate, UIP
         print("Selected Value: \(row+10)")
     }
     
+    
     @IBAction func enterScoreTouchUpInside(_ sender: UIButton) {
-        
+
         let selectedRow = enterScorePicker.selectedRow(inComponent: 0)
         //DEBUG
         let score = selectedRow+10
         print("Selected Value to Save \(score)")
+        
         
         let today = Date.dateAsString(Date())
         
